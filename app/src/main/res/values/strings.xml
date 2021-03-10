@@ -1,18 +1,17 @@
 <resources>
     <string name="app_name">MySportApplication-v3</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Mot de passe</string>
+    <string name="prompt_email">Email :</string>
+    <string name="prompt_password">Mot de passe :</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="connectez_vous">Connectez-vous :</string>
+    <string name="connect">Connectez-vous :</string>
     <string name="connexion">Connexion</string>
-    <string name="vous_n_avez_pas_de_compte">Pas encore de compte ?</string>
     <string name="hint">hint</string>
-    <string name="cr_er_un_nouveau_compte">Créer un nouveau compte</string>
+    <string name="cr_er_un_nouveau_account">Créer un nouveau compte</string>
     <string name="mysportapp">MySportApp</string>
     <string name="combien_d_exercices_voulez_vous_cr_er">Combien d\'exercices voulez-vous créer ?</string>
     <string name="pauses_courtes_entre_chaque_exercices">Pauses courtes entre chaque exercices</string>
@@ -24,7 +23,7 @@
     <string name="enregistrez_vos_informations">Enregistrez vos informations :</string>
     <string name="nom">Nom :</string>
     <string name="pr_nom">Prénom :</string>
-    <string name="valider">Valider</string>
+    <string name="validate">Valider</string>
     <string name="etirements">Etirements</string>
     <string name="biceps">Biceps</string>
     <string name="jambes">Jambes</string>
@@ -32,8 +31,13 @@
     <string name="programmes">Programmes</string>
     <string name="lancer">Lancer</string>
     <string name="modifier">Modifier</string>
-    <string name="retour">Retour</string>
+    <string name="back">Retour</string>
     <string name="descriptif">Descriptif</string>
     <string name="informations">Informations</string>
     <string name="profil">Profile</string>
+    <string name="pseudonyme">Pseudonyme :</string>
+    <string name="taille">Taille</string>
+    <string name="niveau_sportif">Niveau sportif :</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_account">Pas encore de compte ?</string>
 </resources>
