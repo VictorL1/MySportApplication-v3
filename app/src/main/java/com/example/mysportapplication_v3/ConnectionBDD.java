@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,7 @@ public class ConnectionBDD extends AppCompatActivity {
 
 
 
-    TextView text,errorText;
+    EditText text,errorText;
 
     Button show;
 
@@ -23,7 +24,6 @@ public class ConnectionBDD extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_);
 
 
@@ -32,9 +32,9 @@ public class ConnectionBDD extends AppCompatActivity {
 
 
 
-        text = (TextView) findViewById(R.id.textView7);
+        text = (EditText) findViewById(R.id.editText10);
 
-        errorText = (TextView) findViewById(R.id.textView8);
+        errorText = (EditText)  findViewById(R.id.editText11);
 
         show = (Button) findViewById(R.id.button5);
 
