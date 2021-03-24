@@ -2,16 +2,21 @@ package com.example.mysportapplication_v3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MenuAccountActivity extends AppCompatActivity {
     Button b1,b2;
     EditText ed1,ed2,ed3,ed4,ed5,ed6,ed7,ed8, ed9;
-
+    RecyclerView recyclerView;
+    FloatingActionButton add_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +33,15 @@ public class MenuAccountActivity extends AppCompatActivity {
         ed8 = (EditText) findViewById(R.id.editText7);
         ed9 = (EditText) findViewById(R.id.editText8);
 
-        b1.setOnClickListener(v -> {
-            if (!ed1.getText().toString().isEmpty() && !ed2.getText().toString().isEmpty() && !ed3.getText().toString().isEmpty() && !ed4.getText().toString().isEmpty() && !ed5.getText().toString().isEmpty() && !ed6.getText().toString().isEmpty() && !ed7.getText().toString().isEmpty() && !ed8.getText().toString().isEmpty() && !ed9.getText().toString().isEmpty()) {
-                Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
-                moveToMenu();
 
-            } else {
-                Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
-            }
-        });
+            add_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MenuAccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            });
+
 
         b2.setOnClickListener(v -> moveToMenu());
     }

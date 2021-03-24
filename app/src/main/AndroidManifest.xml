@@ -16,6 +16,7 @@
         <activity android:name=".Activity" />
         <activity android:name=".MenuActivity" />
         <activity
+
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
