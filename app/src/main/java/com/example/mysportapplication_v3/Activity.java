@@ -4,27 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Activity extends AppCompatActivity {
 
-    private Button b1;
+    Button desc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_);
 
-        b1 = (Button) findViewById(R.id.button8);
+        desc = (Button) findViewById(R.id.button5);
 
-        b1.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
-            moveToMenu();
+        desc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToConnexionBDD();
+            }
         });
     }
 
-        private void moveToMenu() {
-            Intent intent = new Intent(Activity.this, MenuActivity.class);
-            startActivity(intent);
-        }
+    private void moveToConnexionBDD() {
+        Intent intent = new Intent(Activity.this, connexionBDD.class);
+        startActivity(intent);
     }
+}
+
+
+
+
+
