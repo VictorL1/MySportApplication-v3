@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Activity extends AppCompatActivity {
+public class ActivitiesActivity extends AppCompatActivity {
 
     Button desc;
     @Override
@@ -26,7 +26,7 @@ public class Activity extends AppCompatActivity {
     }
 
     private void moveToConnexionBDD() {
-        Intent intent = new Intent(Activity.this, connexionBDD.class);
+        Intent intent = new Intent(ActivitiesActivity.this, connexionBDD.class);
         startActivity(intent);
     }
 }

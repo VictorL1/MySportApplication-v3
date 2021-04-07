@@ -44,12 +44,12 @@ public class MenuActivity extends AppCompatActivity {
 
 
     private void moveToActivity() {
-        Intent intent = new Intent(MenuActivity.this, Activity.class);
+        Intent intent = new Intent(MenuActivity.this, ActivitiesActivity.class);
         startActivity(intent);
     }
 
     private void moveToChronometre() {
-        Intent intent = new Intent(MenuActivity.this, activity_chronometre.class);
+        Intent intent = new Intent(MenuActivity.this, ChronometreActivity.class);
         startActivity(intent);
     }
 }

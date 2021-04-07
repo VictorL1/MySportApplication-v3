@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MySportApplicationv3">
         <activity android:name=".connexionBDD"></activity>
         <activity android:name=".MenuAccountActivity" />
-        <activity android:name=".Activity" />
+        <activity android:name=".ActivitiesActivity" />
         <activity android:name=".MenuActivity" />
         <activity
 

@@ -2,18 +2,20 @@ package com.example.mysportapplication_v3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class activity_chronometre extends AppCompatActivity {
+public class ChronometreActivity extends AppCompatActivity {
 
     private TextView textViewInfo;
     private TextView textViewCounter;
@@ -22,6 +24,7 @@ public class activity_chronometre extends AppCompatActivity {
     private Button buttonStop;
     private Button buttonResetBaseTime;
     private Button buttoncounter;
+    private Button buttonback;
     private static int counter = 0;
 
     @Override
@@ -39,6 +42,8 @@ public class activity_chronometre extends AppCompatActivity {
 
         this.buttonStop.setEnabled(false);
         this.buttonResetBaseTime.setEnabled(false);
+
+        this.buttonback = (Button)findViewById(R.id.button12);
 
 
         textViewCounter.setText(String.valueOf(counter));
@@ -68,6 +73,11 @@ public class activity_chronometre extends AppCompatActivity {
             public void onClick(View view) {
                 doResetBaseTime();
             }
+        });
+
+        buttonback.setOnClickListener(v -> {
+            Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
+            moveToActivity();
         });
     }
 
@@ -116,4 +126,8 @@ public class activity_chronometre extends AppCompatActivity {
         this.showInfo(elapsedRealtime);
     }
 
+    private void moveToActivity() {
+        Intent intent = new Intent(ChronometreActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
 }
