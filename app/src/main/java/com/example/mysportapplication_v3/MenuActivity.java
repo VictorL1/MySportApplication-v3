@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
-    private Button b1,b2,b3,b4,b5;
+    private Button b1,b2,b3,b4,b5,b6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
         b3 = (Button)findViewById(R.id.button3);
         b4 = (Button)findViewById(R.id.button4);
         b5 = (Button)findViewById(R.id.button5);
+        b6 = (Button)findViewById(R.id.buttonprofile);
 
         b1.setOnClickListener(v -> {
             Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
@@ -40,6 +41,10 @@ public class MenuActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
             moveToChronometre();
         });
+        b6.setOnClickListener(v -> {
+            Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
+            moveToProfile();
+        });
     }
 
 
@@ -50,6 +55,10 @@ public class MenuActivity extends AppCompatActivity {
 
     private void moveToChronometre() {
         Intent intent = new Intent(MenuActivity.this, ChronometreActivity.class);
+        startActivity(intent);
+    }
+    private void moveToProfile() {
+        Intent intent = new Intent(MenuActivity.this, ProfileActivity.class);
         startActivity(intent);
     }
 }

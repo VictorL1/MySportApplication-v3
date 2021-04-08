@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MySportApplicationv3">
-        <activity android:name=".connexionBDD"></activity>
+        <activity android:name=".connexionBDD" />
         <activity android:name=".MenuAccountActivity" />
         <activity android:name=".ActivitiesActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".ChronometreActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity
 
             android:name=".MainActivity"
