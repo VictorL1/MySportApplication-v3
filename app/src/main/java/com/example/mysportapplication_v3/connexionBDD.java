@@ -1,21 +1,15 @@
 package com.example.mysportapplication_v3;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import java.sql.*;
 
 public class connexionBDD extends SQLiteOpenHelper
 {
+
+
     private Context context;
     private static final String DATABASE_NAME = "applisport.db";
     private static final int DATABASE_VERSION = 1;
@@ -50,10 +44,10 @@ public class connexionBDD extends SQLiteOpenHelper
     private static final String COLUMN_CALORIES ="exercice_calories_depensees";
     private static final String COLUMN_RISQUES ="exercice_risques";
     private static final String COLUMN_TIMEMOYMIN2 ="exercice_duree_moy_min";
-    private static final String COLUMN_TIMEMOYMAX2 ="exercice_duree_moy_min";
+    private static final String COLUMN_TIMEMOYMAX2 ="exercice_duree_moy_max";
 
     public connexionBDD(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION) ;
+        super(context, DATABASE_NAME, null, DATABASE_VERSION) ; // On appelle le contructeur de la super-classe
         this.context = context;
     }
 
@@ -92,6 +86,9 @@ public class connexionBDD extends SQLiteOpenHelper
                 ", FOREIGN KEY (" + COLUMN_ID4 +") REFERENCES " + TABLE_NAME2 +"(" + COLUMN_ID2 + ") );"; /* Creation de la clef etrangère de programme dans exercice */
 
         db.execSQL(query);
+
+
+
     }
 
     @Override
@@ -101,6 +98,21 @@ public class connexionBDD extends SQLiteOpenHelper
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
         onCreate(db);
     }
+
+/*
+    public void insertUser(String user_name, String user_firstname, int user_age, String user_pseudo,
+                           String user_mail, Date user_date_naissance, String user_password, String user_weight, String user_height, String user_sport_lvl)
+    {
+        String sql = "insert into utilisateur(user_name, user_firstname, user_age, user_pseudo, user_mail, user_date_naissance, user_password, user_weight, user_height, user_sport_lvl) values (" + user_name + ", " + user_firstname + ", " + user_age + " ," + user_pseudo + " , "+ user_mail +", "+ user_date_naissance +", "+ user_password +", "+ user_weight +", "+ user_height +", "+ user_sport_lvl + ")";
+        this.getWritableDatabase().execSQL(sql);
+        Log.i("DATABASE", "insertUser invoked");
+    }
+
+ */
+
+
+
+
 }
 
 

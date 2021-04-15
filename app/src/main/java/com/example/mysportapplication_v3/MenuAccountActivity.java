@@ -45,6 +45,37 @@ public class MenuAccountActivity extends AppCompatActivity {
 
         b2.setOnClickListener(v -> moveToMenu());
     }
+
+
+    public void sendCreated(View view){
+        String prenomUtilisateur = ((EditText) findViewById(R.id.editText2)).getText().toString();
+
+        if(prenomUtilisateur.length()!=0)
+        {
+            final DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+            db.open();
+
+            // On vérifie que l'utilisateur n'existe pas déja
+            boolean existe = db.existUser(prenomUtilisateur);
+
+            // si l'uitlisateur n'existe pas on le créer
+            if(!existe){
+                db.addUser(prenomUtilisateur);
+                String age = db.getAge(prenomUtilisateur);
+            }
+            else{
+                Toast.makeText(this, "L'utilisateur " +prenomUtilisateur+ "est déja existant",Toast.LENGTH_SHORT).show();
+            }
+
+            db.close();
+        }
+        else{
+            Toast.makeText(this, "Vous devez donner un prénom à votre utilisateur pour le créer",Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+
         private void moveToMenu(){
             Intent intent = new Intent(MenuAccountActivity.this, MainActivity.class);
             startActivity(intent);
